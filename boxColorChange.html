@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .container{
+            display:flex;
+            justify-content:space-around;
+            align-items: center;
+            height:100vh;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            width:250px;
+            height: 250px;;
+            border-radius: 10px;
+            border-style:solid ;
+            align-items: center;
+            margin-top: 20px;
+
+        }
+        .selection{
+            display:flex;
+            height:100vh;
+            justify-content: center;
+            flex-direction: column;
+
+        }
+        button{
+            padding: 5px 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        
+        <div class="selection">
+            
+            <label for="">Color</label>
+             <input id="color1" type="text"/>
+            <button onclick="cChange1()">Change</button>
+            <div class="box" id="box1"></div>
+        </div>
+
+        <div class="selection">
+            
+            <label for="">Color</label> <input id="color2" type="text"/>
+            <button onclick="cChange2()">Change</button>
+            <div class="box" id="box2"></div>
+        </div>
+
+        <div class="selection">
+            
+            <label for="">Color</label> <input id="color3" type="text"/>
+            <button onclick="cChange3()">Change</button>
+            <div class="box" id="box3"></div>
+        </div>
+        
+    </div>
+
+    
+</body>
+<script>
+    function cChange1(){
+        var color=document.getElementById("color1").value;
+       document.getElementById("box1").style.backgroundColor=color
+        
+    }
+    function cChange2(){
+        var color=document.getElementById("color2").value;
+       document.getElementById("box2").style.backgroundColor=color
+        
+    }
+    function cChange3(){
+        var color=document.getElementById("color3").value;
+       document.getElementById("box3").style.backgroundColor=color
+        
+    }
+
+</script>
+</html>
